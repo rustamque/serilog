@@ -133,7 +133,7 @@ public class MessageTemplateTextFormatter : ITextFormatter
                     if (!logEvent.Properties.TryGetValue(pt.PropertyName, out var propertyValue))
                     {
                         if (pt.Alignment.HasValue)
-                            writer.Dispose();
+                            writer?.Dispose();
                         continue;
                     }
 
