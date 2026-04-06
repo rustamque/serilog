@@ -384,7 +384,7 @@ partial class PropertyValueConverter : ILogEventPropertyFactory, ILogEventProper
 
     ScalarValue Stringify(object value)
     {
-        var stringified = value?.ToString();
+        var stringified = value.ToString();
         var truncated = stringified == null ? "" : TruncateIfNecessary(stringified);
         return new ScalarValue(truncated);
     }

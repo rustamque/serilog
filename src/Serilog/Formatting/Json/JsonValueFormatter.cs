@@ -549,7 +549,7 @@ public class JsonValueFormatter : LogEventPropertyValueVisitor<TextWriter, bool>
     {
         Guard.AgainstNull(value);
 
-        FormatStringValue(value?.ToString() ?? "", output);
+        FormatStringValue(value.ToString() ?? "", output);
     }
 
     static void FormatStringValue(string str, TextWriter output)
